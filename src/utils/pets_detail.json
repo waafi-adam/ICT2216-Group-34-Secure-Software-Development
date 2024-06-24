@@ -9,19 +9,19 @@
         "species": "Dog",
         "breed": "Labrador Retriever",
         "gender": "Female",
-        "thumbnail": "https://example.com/images/pet-1a.jpeg",
+        "thumbnail":
+         "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
         "images": [
-            "https://example.com/images/pet-1a.jpeg",
-            "https://example.com/images/pet-1b.jpeg",
-            "https://example.com/images/pet-1c.jpeg"
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg"
         ],
         "colors": [
             "Brown",
             "White"
         ],
-        "shelter": "Pawsome Friends",
         "description": "Bella was found wandering the streets alone, malnourished and scared. Our team took her in, provided her with medical care, and showered her with love. Now, she is a friendly and energetic dog who loves to play. She is looking for a loving home where she can get plenty of exercise and attention. Bella enjoys long walks and playing fetch. She gets along well with other dogs and is very gentle with children.",
-        "health_status": "Vaccinated",
+        "vaccinated": true,
         "spayed_neutered": true,
         "adoption_requirements": [
             "A home with a yard",
@@ -44,19 +44,19 @@
         "species": "Cat",
         "breed": "Domestic Shorthair",
         "gender": "Female",
-        "thumbnail": "https://example.com/images/pet-2a.jpeg",
+        "thumbnail":
+         "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
         "images": [
-            "https://example.com/images/pet-2a.jpeg",
-            "https://example.com/images/pet-2b.jpeg",
-            "https://example.com/images/pet-2c.jpeg"
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg"
         ],
         "colors": [
             "Black",
             "White"
         ],
-        "shelter": "Pawsome Friends",
         "description": "Whiskers was found in an abandoned building, hiding from the world. It took time and patience, but she gradually began to trust us. Whiskers is now a calm and affectionate cat who enjoys lounging in sunny spots and getting head scratches. She is perfect for a quiet home. Whiskers is very independent and prefers a peaceful environment. She would do best in a home without young children or other pets.",
-        "health_status": "Vaccinated",
+        "vaccinated": true,
         "spayed_neutered": true,
         "adoption_requirements": [
             "Indoor only",
@@ -78,18 +78,18 @@
         "species": "Dog",
         "breed": "Golden Retriever",
         "gender": "Male",
-        "thumbnail": "https://example.com/images/pet-3a.jpeg",
+        "thumbnail":
+         "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
         "images": [
-            "https://example.com/images/pet-3a.jpeg",
-            "https://example.com/images/pet-3b.jpeg",
-            "https://example.com/images/pet-3c.jpeg"
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg"
         ],
         "colors": [
             "Golden"
         ],
-        "shelter": "Pawsome Friends",
         "description": "Max was rescued from a neglectful situation where he was kept in a small cage. Despite his rough start, Max is a young and playful puppy with a lot of energy. He needs an active family who can keep up with his playful nature. Max loves running and playing with toys. He is very curious and loves exploring new places. Max would benefit from a family who can provide him with plenty of physical and mental stimulation.",
-        "health_status": "Vaccinated",
+        "vaccinated": true,
         "spayed_neutered": false,
         "adoption_requirements": [
             "Active family",
@@ -112,19 +112,19 @@
         "species": "Cat",
         "breed": "Siberian",
         "gender": "Female",
-        "thumbnail": "https://example.com/images/pet-4a.jpeg",
+        "thumbnail":
+         "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
         "images": [
-            "https://example.com/images/pet-4a.jpeg",
-            "https://example.com/images/pet-4b.jpeg",
-            "https://example.com/images/pet-4c.jpeg"
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg"
         ],
         "colors": [
             "Gray",
             "White"
         ],
-        "shelter": "Pawsome Friends",
         "description": "Luna was found near a busy highway, dangerously close to traffic. After being rescued, she showed her gratitude with purrs and gentle headbutts. Luna is a beautiful and independent cat. She enjoys her alone time but also likes to cuddle on her own terms. Luna is very playful and loves chasing laser pointers. She would do well in a home with older children who understand her independent nature.",
-        "health_status": "Vaccinated",
+        "vaccinated": true,
         "spayed_neutered": true,
         "adoption_requirements": [
             "Older children preferred",
@@ -146,19 +146,19 @@
         "species": "Dog",
         "breed": "German Shepherd",
         "gender": "Male",
-        "thumbnail": "https://example.com/images/pet-5a.jpeg",
+        "thumbnail":
+         "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
         "images": [
-            "https://example.com/images/pet-5a.jpeg",
-            "https://example.com/images/pet-5b.jpeg",
-            "https://example.com/images/pet-5c.jpeg"
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg"
         ],
         "colors": [
             "Black",
             "Brown"
         ],
-        "shelter": "Pawsome Friends",
         "description": "Charlie was left tied to our shelter's gate one night. He was scared and confused but soon warmed up to our staff. Charlie is a loyal and protective dog. He is well-behaved and trained, making him a great addition to any family. Charlie loves learning new tricks and is very obedient. He would do best in a home with a strong leader who can continue his training.",
-        "health_status": "Vaccinated",
+        "vaccinated": true,
         "spayed_neutered": true,
         "adoption_requirements": [
             "Experienced dog owners",
@@ -181,19 +181,19 @@
         "species": "Dog",
         "breed": "Beagle",
         "gender": "Female",
-        "thumbnail": "https://example.com/images/pet-6a.jpeg",
+        "thumbnail":
+         "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
         "images": [
-            "https://example.com/images/pet-6a.jpeg",
-            "https://example.com/images/pet-6b.jpeg",
-            "https://example.com/images/pet-6c.jpeg"
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg"
         ],
         "colors": [
             "White",
             "Black"
         ],
-        "shelter": "Pawsome Friends",
         "description": "Daisy was found wandering alone in a park, clearly having been lost for some time. Despite her initial shyness, she quickly became a favorite at the shelter. Daisy is a sweet and gentle dog. She loves children and would make a perfect family pet. Daisy enjoys long naps and cuddling with her favorite humans. She is very gentle and gets along well with other pets.",
-        "health_status": "Vaccinated",
+        "vaccinated": true,
         "spayed_neutered": true,
         "adoption_requirements": [
             "Family with children",
@@ -216,18 +216,18 @@
         "species": "Cat",
         "breed": "Tabby",
         "gender": "Male",
-        "thumbnail": "https://example.com/images/pet-7a.jpeg",
+        "thumbnail":
+         "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
         "images": [
-            "https://example.com/images/pet-7a.jpeg",
-            "https://example.com/images/pet-7b.jpeg",
-            "https://example.com/images/pet-7c.jpeg"
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg"
         ],
         "colors": [
             "Orange"
         ],
-        "shelter": "Pawsome Friends",
         "description": "Oliver was found in a storm drain, scared and hungry. Our team rescued him and provided him with the care he needed to recover. Oliver is now a curious and playful cat who loves exploring. He is always up for an adventure and enjoys interactive toys. Oliver is very social and enjoys the company of other cats. He would do well in a home with other pets.",
-        "health_status": "Vaccinated",
+        "vaccinated": true,
         "spayed_neutered": true,
         "adoption_requirements": [
             "Indoor only",
@@ -249,19 +249,19 @@
         "species": "Dog",
         "breed": "Cocker Spaniel",
         "gender": "Female",
-        "thumbnail": "https://example.com/images/pet-8a.jpeg",
+        "thumbnail":
+         "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
         "images": [
-            "https://example.com/images/pet-8a.jpeg",
-            "https://example.com/images/pet-8b.jpeg",
-            "https://example.com/images/pet-8c.jpeg"
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
+            "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg"
         ],
         "colors": [
             "Red",
             "White"
         ],
-        "shelter": "Pawsome Friends",
         "description": "Ruby was found abandoned at a local playground, tied to a bench. Despite this, she remains incredibly loving and affectionate. Ruby enjoys playing fetch and is very friendly with other dogs. She is looking for a family that will never leave her behind. Ruby loves water and enjoys swimming. She would be a great companion for an active family.",
-        "health_status": "Vaccinated",
+        "vaccinated": true,
         "spayed_neutered": true,
         "adoption_requirements": [
             "Active family",

@@ -1,29 +1,30 @@
-import React from 'react'
-import styled from 'styled-components'
-import { formatPrice } from '../utils/helpers'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
 const ListView = ({ pets }) => {
   return (
     <Wrapper>
       {pets.map((pet) => {
-        const { id, image, name, price, description } = pet
+        const { id, image, name, description, age, gender, vaccinated, spayed_neutered } = pet;
         return (
           <article key={id}>
             <img src={image} alt={name} />
             <div>
               <h4>{name}</h4>
-              <h5 className='price'>{formatPrice(price)}</h5>
-              <p>{description.substring(0, 150)}...</p>
-              <Link to={`/pets/${id}`} className='btn'>
-                Details
-              </Link>
+              <p className='desc'>{description.substring(0, 150)}...</p>
+              <p className='info'><span>Age:</span> {age.years} years, {age.months} months</p>
+              <p className='info'><span>Gender:</span> {gender}</p>
+              <p className='info'><span>Vaccinated:</span> {vaccinated ? 'Yes' : 'No'}</p>
+              <p className='info'><span>Spayed/Neutered:</span> {spayed_neutered ? 'Yes' : 'No'}</p>
+              <Link to={`/pets/${id}`} className='btn'>Details</Link>
             </div>
           </article>
-        )
+        );
       })}
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
   display: grid;
@@ -41,16 +42,18 @@ const Wrapper = styled.section`
   h4 {
     margin-bottom: 0.5rem;
   }
-  .price {
-    color: var(--clr-primary-6);
-    margin-bottom: 0.75rem;
-  }
-  p {
+  .desc {
     max-width: 45em;
     margin-bottom: 1rem;
   }
+  .info {
+    margin-bottom: 0.5rem;
+    span {
+      font-weight: bold;
+    }
+  }
   .btn {
-    font-size: 0.5rem;
+    font-size: 0.85rem;
     padding: 0.25rem 0.5rem;
   }
   @media (min-width: 992px) {
@@ -61,6 +64,6 @@ const Wrapper = styled.section`
       align-items: center;
     }
   }
-`
+`;
 
-export default ListView
+export default ListView;

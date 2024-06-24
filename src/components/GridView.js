@@ -1,18 +1,18 @@
-import React from 'react'
-import styled from 'styled-components'
-import Pet from './Pet'
+import React from 'react';
+import styled from 'styled-components';
+import Pet from './Pet';
 
 const GridView = ({ pets }) => {
   return (
     <Wrapper>
       <div className='pets-container'>
         {pets.map((pet) => {
-          return <Pet key={pet.id} {...pet} />
+          return <Pet key={pet.id} {...pet} />;
         })}
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
   img {
@@ -34,6 +34,6 @@ const Wrapper = styled.section`
       grid-template-columns: repeat(3, 1fr);
     }
   }
-`
+`;
 
-export default GridView
+export default GridView;

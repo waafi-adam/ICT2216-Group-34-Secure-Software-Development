@@ -17,14 +17,14 @@ const CartItems = () => {
       <hr />
       <div className='link-container'>
         <Link to='/pets' className='link-btn'>
-          continue shopping
+          Continue Browsing Pets
         </Link>
         <button
           type='button'
           className='link-btn clear-btn'
           onClick={clearCart}
         >
-          clear shopping cart
+          Clear Adoption List
         </button>
       </div>
       <CartTotals />

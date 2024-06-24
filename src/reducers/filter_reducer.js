@@ -7,103 +7,72 @@ import {
   UPDATE_FILTERS,
   FILTER_PETS,
   CLEAR_FILTERS,
-} from '../actions'
+} from '../actions';
 
 const filter_reducer = (state, action) => {
   if (action.type === LOAD_PETS) {
-    let maxPrice = action.payload.map((p) => p.price)
-    maxPrice = Math.max(...maxPrice)
     return {
       ...state,
       all_pets: [...action.payload],
       filtered_pets: [...action.payload],
-      filters: { ...state.filters, max_price: maxPrice, price: maxPrice },
-    }
+    };
   }
   if (action.type === SET_GRIDVIEW) {
-    return { ...state, grid_view: true }
+    return { ...state, grid_view: true };
   }
   if (action.type === SET_LISTVIEW) {
-    return { ...state, grid_view: false }
+    return { ...state, grid_view: false };
   }
   if (action.type === UPDATE_SORT) {
-    return { ...state, sort: action.payload }
+    return { ...state, sort: action.payload };
   }
   if (action.type === SORT_PETS) {
-    const { sort, filtered_pets } = state
-    let tempPets = []
-    if (sort === 'price-lowest') {
-      tempPets = filtered_pets.sort((a, b) => {
-        // if (a.price < b.price) {
-        //   return -1
-        // }
-        // if (a.price > b.price) {
-        //   return 1
-        // }
-        // return 0
-        return a.price - b.price
-      })
-    }
-    if (sort === 'price-highest') {
-      tempPets = filtered_pets.sort((a, b) => {
-        // if (b.price < a.price) {
-        //   return -1
-        // }
-        // if (b.price > a.price) {
-        //   return 1
-        // }
-        // return 0
-        return b.price - a.price
-      })
-    }
+    const { sort, filtered_pets } = state;
+    let tempPets = [...filtered_pets];
     if (sort === 'name-a') {
-      tempPets = filtered_pets.sort((a, b) => {
-        return a.name.localeCompare(b.name)
-      })
+      tempPets = tempPets.sort((a, b) => a.name.localeCompare(b.name));
     }
     if (sort === 'name-z') {
-      tempPets = filtered_pets.sort((a, b) => {
-        return b.name.localeCompare(a.name)
-      })
+      tempPets = tempPets.sort((a, b) => b.name.localeCompare(a.name));
+    }
+    if (sort === 'age-youngest') {
+      tempPets = tempPets.sort((a, b) => (a.age.years === b.age.years ? a.age.months - b.age.months : a.age.years - b.age.years));
+    }
+    if (sort === 'age-oldest') {
+      tempPets = tempPets.sort((a, b) => (a.age.years === b.age.years ? b.age.months - a.age.months : b.age.years - a.age.years));
     }
 
-    return { ...state, filtered_pets: tempPets }
+    return { ...state, filtered_pets: tempPets };
   }
   if (action.type === UPDATE_FILTERS) {
-    const { name, value } = action.payload
-    return { ...state, filters: { ...state.filters, [name]: value } }
+    const { name, value } = action.payload;
+    return { ...state, filters: { ...state.filters, [name]: value } };
   }
   if (action.type === FILTER_PETS) {
-    const { all_pets } = state
-    const { text, category, company, color, price, shipping } = state.filters
-    let tempPets = [...all_pets]
+    const { all_pets, filters } = state;
+    const { text, category, shelter, gender, vaccinated, spayed_neutered } = filters;
+    let tempPets = [...all_pets];
+
     if (text) {
-      tempPets = tempPets.filter((pet) =>
-        pet.name.toLowerCase().startsWith(text)
-      )
+      tempPets = tempPets.filter((pet) => pet.name.toLowerCase().includes(text.toLowerCase()));
     }
     if (category !== 'all') {
-      tempPets = tempPets.filter(
-        (pet) => pet.category === category
-      )
+      tempPets = tempPets.filter((pet) => pet.species.toLowerCase() === category.toLowerCase());
     }
-    if (company !== 'all') {
-      tempPets = tempPets.filter(
-        (pet) => pet.company === company
-      )
+    if (shelter !== 'all') {
+      tempPets = tempPets.filter((pet) => pet.shelter.toLowerCase() === shelter.toLowerCase());
     }
-    if (color !== 'all') {
-      tempPets = tempPets.filter((pet) => {
-        return pet.colors.find((c) => c === color)
-      })
+    if (gender !== 'all') {
+      tempPets = tempPets.filter((pet) => pet.gender.toLowerCase() === gender.toLowerCase());
     }
-    // filter by price
-    tempPets = tempPets.filter((pet) => pet.price <= price)
-    // filter by shipping
-    if (shipping) {
-      tempPets = tempPets.filter((pet) => pet.shipping === true)
+    if (vaccinated !== 'all') {
+      tempPets = tempPets.filter((pet) => (vaccinated === 'yes' ? pet.vaccinated : !pet.vaccinated));
     }
-    return { ...state, filtered_pets: tempPets }
+    if (spayed_neutered !== 'all') {
+      tempPets = tempPets.filter((pet) => (spayed_neutered === 'yes' ? pet.spayed_neutered : !pet.spayed_neutered));
+    }
+
+    return { ...state, filtered_pets: tempPets };
   }
   if (action.type === CLEAR_FILTERS) {
     return {
@@ -111,15 +80,15 @@ const filter_reducer = (state, action) => {
       filters: {
         ...state.filters,
         text: '',
-        company: 'all',
+        shelter: 'all',
         category: 'all',
-        color: 'all',
-        price: state.filters.max_price,
-        shipping: false,
+        gender: 'all',
+        vaccinated: 'all',
+        spayed_neutered: 'all',
       },
-    }
+    };
   }
-  throw new Error(`No Matching "${action.type}" - action type`)
-}
+  throw new Error(`No Matching "${action.type}" - action type`);
+};
 
-export default filter_reducer
+export default filter_reducer;

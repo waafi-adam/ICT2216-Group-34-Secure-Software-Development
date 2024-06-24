@@ -1,34 +1,34 @@
-import React from 'react'
-import styled from 'styled-components'
-import { useFilterContext } from '../context/filter_context'
-import { getUniqueValues, formatPrice } from '../utils/helpers'
-import { FaCheck } from 'react-icons/fa'
+import React from 'react';
+import styled from 'styled-components';
+import { useFilterContext } from '../context/filter_context';
+import { getUniqueValues } from '../utils/helpers';
 
 const Filters = () => {
   const {
     filters: {
       text,
       category,
-      company,
-      color,
-      min_price,
-      price,
-      max_price,
-      shipping,
+      shelter,
+      gender,
+      vaccinated,
+      spayed_neutered,
+      age,
     },
     updateFilters,
-    all_pets,
     clearFilters,
-  } = useFilterContext()
+    all_pets,
+  } = useFilterContext();
 
-  const categories = getUniqueValues(all_pets, 'category')
-  const companies = getUniqueValues(all_pets, 'company')
-  const colors = getUniqueValues(all_pets, 'colors')
+  const categories = getUniqueValues(all_pets, 'species');
+  const shelters = getUniqueValues(all_pets, 'shelter');
+  const genders = ['all', 'male', 'female'];
+  const vaccinationStatus = ['all', 'yes', 'no'];
+  const spayedNeuteredStatus = ['all', 'yes', 'no'];
+
   return (
     <Wrapper>
       <div className='content'>
         <form onSubmit={(e) => e.preventDefault()}>
-          {/* search input */}
           <div className='form-control'>
             <input
               type='text'
@@ -39,120 +39,90 @@ const Filters = () => {
               className='search-input'
             />
           </div>
-          {/* end of search input */}
-          {/* category */}
           <div className='form-control'>
-            <h5>category</h5>
+            <h5>species</h5>
             <div>
-              {categories.map((c, index) => {
-                return (
-                  <button
-                    key={index}
-                    onClick={updateFilters}
-                    type='button'
-                    name='category'
-                    className={`${
-                      category === c.toLowerCase() ? 'active' : null
-                    }`}
-                  >
-                    {c}
-                  </button>
-                )
-              })}
+              {categories.map((c, index) => (
+                <button
+                  key={index}
+                  onClick={updateFilters}
+                  type='button'
+                  name='category'
+                  className={`${category === c.toLowerCase() ? 'active' : ''}`}
+                >
+                  {c}
+                </button>
+              ))}
             </div>
           </div>
-          {/* end of category */}
-          {/* company */}
           <div className='form-control'>
-            <h5>company</h5>
+            <h5>shelter</h5>
             <select
-              name='company'
-              value={company}
+              name='shelter'
+              value={shelter}
               onChange={updateFilters}
-              className='company'
+              className='shelter-select'
             >
-              {companies.map((c, index) => {
-                return (
-                  <option key={index} value={c}>
-                    {c}
-                  </option>
-                )
-              })}
+              {shelters.map((s, index) => (
+                <option key={index} value={s}>
+                  {s}
+                </option>
+              ))}
             </select>
           </div>
-          {/* end of company */}
-          {/* colors */}
           <div className='form-control'>
-            <h5>colors</h5>
-            <div className='colors'>
-              {colors.map((c, index) => {
-                if (c === 'all') {
-                  return (
-                    <button
-                      key={index}
-                      name='color'
-                      onClick={updateFilters}
-                      data-color='all'
-                      className={`${
-                        color === 'all' ? 'all-btn active' : 'all-btn'
-                      }`}
-                    >
-                      all
-                    </button>
-                  )
-                }
-                return (
-                  <button
-                    key={index}
-                    name='color'
-                    style={{ background: c }}
-                    className={`${
-                      color === c ? 'color-btn active' : 'color-btn'
-                    }`}
-                    data-color={c}
-                    onClick={updateFilters}
-                  >
-                    {color === c ? <FaCheck /> : null}
-                  </button>
-                )
-              })}
-            </div>
+            <h5>gender</h5>
+            <select
+              name='gender'
+              value={gender}
+              onChange={updateFilters}
+              className='gender-select'
+            >
+              {genders.map((g, index) => (
+                <option key={index} value={g}>
+                  {g}
+                </option>
+              ))}
+            </select>
           </div>
-          {/* end of colors */}
-          {/* price */}
           <div className='form-control'>
-            <h5>price</h5>
-            <p className='price'>{formatPrice(price)}</p>
-            <input
-              type='range'
-              name='price'
+            <h5>vaccinated</h5>
+            <select
+              name='vaccinated'
+              value={vaccinated}
               onChange={updateFilters}
-              min={min_price}
-              max={max_price}
-              value={price}
-            />
+              className='vaccinated-select'
+            >
+              {vaccinationStatus.map((v, index) => (
+                <option key={index} value={v}>
+                  {v}
+                </option>
+              ))}
+            </select>
           </div>
-          {/* end of price */}
-          {/* shipping */}
-          <div className='form-control shipping'>
-            <label htmlFor='shipping'>free shipping</label>
-            <input
-              type='checkbox'
-              name='shipping'
-              id='shipping'
-              checked={shipping}
+          <div className='form-control'>
+            <h5>spayed/neutered</h5>
+            <select
+              name='spayed_neutered'
+              value={spayed_neutered}
               onChange={updateFilters}
-            />
+              className='spayed-neutered-select'
+            >
+              {spayedNeuteredStatus.map((s, index) => (
+                <option key={index} value={s}>
+                  {s}
+                </option>
+              ))}
+            </select>
           </div>
-          {/* end of  shipping */}
         </form>
         <button type='button' className='clear-btn' onClick={clearFilters}>
           clear filters
         </button>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
   .form-control {
@@ -187,57 +157,11 @@ const Wrapper = styled.section`
   .active {
     border-color: var(--clr-grey-5);
   }
-  .company {
+  .shelter-select, .gender-select, .vaccinated-select, .spayed-neutered-select {
     background: var(--clr-grey-10);
     border-radius: var(--radius);
     border-color: transparent;
     padding: 0.25rem;
-  }
-  .colors {
-    display: flex;
-    align-items: center;
-  }
-  .color-btn {
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    background: #222;
-    margin-right: 0.5rem;
-    border: none;
-    cursor: pointer;
-    opacity: 0.5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    svg {
-      font-size: 0.5rem;
-      color: var(--clr-white);
-    }
-  }
-  .all-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 0.5rem;
-    opacity: 0.5;
-  }
-  .active {
-    opacity: 1;
-  }
-  .all-btn .active {
-    text-decoration: underline;
-  }
-  .price {
-    margin-bottom: 0.25rem;
-  }
-  .shipping {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    text-transform: capitalize;
-    column-gap: 0.5rem;
-    font-size: 1rem;
   }
   .clear-btn {
     background: var(--clr-red-dark);
@@ -251,6 +175,6 @@ const Wrapper = styled.section`
       top: 1rem;
     }
   }
-`
+`;
 
-export default Filters
+export default Filters;

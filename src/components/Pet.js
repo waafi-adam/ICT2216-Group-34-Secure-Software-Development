@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import { formatPrice } from '../utils/helpers'
-import { FaSearch } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
-const Pet = ({ image, name, price, id }) => {
+import React from 'react';
+import styled from 'styled-components';
+import { FaSearch } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
+const Pet = ({ image, name, id, age, gender }) => {
   return (
     <Wrapper>
       <div className='container'>
@@ -14,11 +14,13 @@ const Pet = ({ image, name, price, id }) => {
       </div>
       <footer>
         <h5>{name}</h5>
-        <p>{formatPrice(price)}</p>
+        <p>Age: {age.years}y, {age.months}m</p>
+        <p>Gender: {gender}</p>
       </footer>
     </Wrapper>
-  )
-}
+  );
+};
+
 const Wrapper = styled.article`
   .container {
     position: relative;
@@ -61,18 +63,16 @@ const Wrapper = styled.article`
   footer {
     margin-top: 1rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
   }
   footer h5,
   footer p {
     margin-bottom: 0;
     font-weight: 400;
   }
+`;
 
-  footer p {
-    color: var(--clr-primary-5);
-    letter-spacing: var(--spacing);
-  }
-`
-export default Pet
+export default Pet;
