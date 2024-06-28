@@ -7,6 +7,7 @@ import Error from './ErrorPage'
 import Checkout from './CheckoutPage'
 import PrivateRoute from './PrivateRoute'
 import AuthWrapper from './AuthWrapper'
+import Login from './Login'
 export {
   Home,
   SinglePet,
@@ -17,4 +18,5 @@ export {
   Pets,
   PrivateRoute,
   AuthWrapper,
+  Login
 }

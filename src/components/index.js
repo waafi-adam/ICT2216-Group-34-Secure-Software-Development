@@ -17,6 +17,10 @@ import Stars from './Stars'
 import CartContent from './CarContent'
 import PageHero from './PageHero'
 import StripeCheckout from './StripeCheckout'
+import Alert from './Alert'
+import FormRow from './FormRow'
+import Logo from './Logo'
+import CheckoutForm from './CheckoutForm'
 export {
   FeaturedPets,
   Navbar,
@@ -37,4 +41,8 @@ export {
   CartContent,
   PageHero,
   StripeCheckout,
+  Alert,
+  FormRow,
+  Logo,
+  CheckoutForm
 }

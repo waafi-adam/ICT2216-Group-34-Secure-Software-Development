@@ -7,6 +7,10 @@ import { FilterProvider } from './context/filter_context';
 import { CartProvider } from './context/cart_context';
 import { UserProvider } from './context/user_context';
 import { Auth0Provider } from '@auth0/auth0-react';
+import { AppProvider } from './context/appContext';
+import { CheckoutProvider } from './context/checkout_context';
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
@@ -17,14 +21,18 @@ root.render(
       redirect_uri: `${window.location.origin}/cart`,
     }}
   >
-    <UserProvider>
-      <PetsProvider>
-        <FilterProvider>
-          <CartProvider>
-            <App />
-          </CartProvider>
-        </FilterProvider>
-      </PetsProvider>
-    </UserProvider>
+    <AppProvider>
+      <CheckoutProvider>
+      <UserProvider>
+        <PetsProvider>
+          <FilterProvider>
+            <CartProvider>
+              <App />
+            </CartProvider>
+          </FilterProvider>
+        </PetsProvider>
+      </UserProvider>
+      </CheckoutProvider>
+    </AppProvider>
   </Auth0Provider>
 );
